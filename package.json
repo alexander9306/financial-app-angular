@@ -9,6 +9,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
+    "elint": "tsc --noEmit && eslint . --ext js,ts,json --quiet --fix && npm run lint:styles",
+    "lint:styles": "npx stylelint src/**/*.scss",
     "e2e": "ng e2e"
   },
   "husky": {
@@ -50,6 +52,7 @@
     "@typescript-eslint/parser": "4.3.0",
     "eslint": "^7.6.0",
     "eslint-config-airbnb-typescript": "^12.3.1",
+    "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jsdoc": "30.7.6",
     "eslint-plugin-prefer-arrow": "1.2.2",

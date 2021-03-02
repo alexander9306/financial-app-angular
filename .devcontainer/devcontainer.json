@@ -12,7 +12,17 @@
 
 	// Set *default* container specific settings.json values on container create.
 	"settings": { 
-		"terminal.integrated.shell.linux": "/bin/bash"
+		"terminal.integrated.shell.linux": "/bin/bash",
+		"eslint.options": {
+			"extensions": [".ts", ".html"]
+		},
+		"eslint.validate": [
+			"javascript",
+			"javascriptreact",
+			"typescript",
+			"typescriptreact",
+			"html"
+		],
 	},
 
 	// Add the IDs of extensions you want installed when the container is created.
