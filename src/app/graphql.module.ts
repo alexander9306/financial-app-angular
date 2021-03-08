@@ -16,19 +16,19 @@ export class GraphQLModule {
     apollo.create({
       link: httpLink.create({ uri: environment.apiUrl }),
       cache: new InMemoryCache(),
-      resolvers: {
-        Post: {
-          async isPublic(r, args, ctx) {
-            // console.log({ r, args, ctx });
+      // resolvers: {
+      //   Post: {
+      //     async isPublic(r, args, ctx) {
+      //       // console.log({ r, args, ctx });
 
-            return new Promise((resolve) => {
-              setTimeout(() => {
-                resolve(true);
-              }, 500);
-            });
-          },
-        },
-      },
+      //       return new Promise((resolve) => {
+      //         setTimeout(() => {
+      //           resolve(true);
+      //         }, 500);
+      //       });
+      //     },
+      //   },
+      // },
     });
   }
 }
