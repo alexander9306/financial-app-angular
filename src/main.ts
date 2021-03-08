@@ -10,4 +10,6 @@ if (environment.production) {
 
 platformBrowserDynamic()
   .bootstrapModule(AppModule)
+  // Add console Error in case of global error happends
+  // eslint-disable-next-line no-console
   .catch((err) => console.log(err));

@@ -14,6 +14,9 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": [
+              "zen-observable"
+            ],
             "outputPath": "www",
             "index": "src/index.html",
             "main": "src/main.ts",
