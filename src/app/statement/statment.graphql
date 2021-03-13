@@ -1,0 +1,32 @@
+query GetStatements($userId: ID!) {
+  statements(userId: $userId) {
+    ...StatementsFragment
+  }
+}
+
+fragment StatementsFragment on Statement {
+  id
+  assets {
+    description
+    cost
+    quantity
+    type
+  }
+  expenses {
+    description
+    cash
+    type
+  }
+  incomes {
+    description
+    cash
+    type
+  }
+  liabilities {
+    description
+    cash
+    type
+  }
+  createdAt
+  updatedAt
+}

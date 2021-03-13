@@ -11,7 +11,8 @@
     "lint": "ng lint",
     "elint": "tsc --noEmit && eslint . --ext js,ts,json --quiet --fix && npm run lint:styles",
     "lint:styles": "npx stylelint src/**/*.scss",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "generate": "graphql-codegen --config codegen.yml"
   },
   "husky": {
     "hooks": {
@@ -47,6 +48,7 @@
     "@angular/compiler-cli": "~11.2.0",
     "@angular/language-service": "~11.2.0",
     "@capacitor/cli": "2.4.6",
+    "@graphql-codegen/cli": "1.21.2",
     "@ionic/angular-toolkit": "^3.1.0",
     "@types/history": "^4.7.8",
     "@types/jasmine": "~3.6.0",
@@ -73,7 +75,11 @@
     "prettier": "2.2.1",
     "protractor": "~7.0.0",
     "ts-node": "~8.3.0",
-    "typescript": "~4.0.2"
+    "typescript": "~4.0.2",
+    "@graphql-codegen/typescript-apollo-angular": "2.3.1",
+    "@graphql-codegen/typescript": "1.21.1",
+    "@graphql-codegen/typescript-operations": "1.17.15",
+    "@graphql-codegen/introspection": "1.18.1"
   },
   "description": "An Ionic project"
 }

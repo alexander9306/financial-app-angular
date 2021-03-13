@@ -12,23 +12,9 @@ import { environment } from '../environments/environment';
 })
 export class GraphQLModule {
   constructor(apollo: Apollo, httpLink: HttpLink) {
-    // create Apollo
     apollo.create({
       link: httpLink.create({ uri: environment.apiUrl }),
       cache: new InMemoryCache(),
-      // resolvers: {
-      //   Post: {
-      //     async isPublic(r, args, ctx) {
-      //       // console.log({ r, args, ctx });
-
-      //       return new Promise((resolve) => {
-      //         setTimeout(() => {
-      //           resolve(true);
-      //         }, 500);
-      //       });
-      //     },
-      //   },
-      // },
     });
   }
 }
