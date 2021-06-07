@@ -7,9 +7,16 @@ import { IonicModule } from '@ionic/angular';
 import { StatementPageRoutingModule } from './statement-routing.module';
 
 import { StatementPage } from './statement.page';
+import { IncomeComponentModule } from '../income/income.module';
 
 @NgModule({
-  imports: [CommonModule, FormsModule, IonicModule, StatementPageRoutingModule],
+  imports: [
+    CommonModule,
+    FormsModule,
+    IonicModule,
+    StatementPageRoutingModule,
+    IncomeComponentModule,
+  ],
   declarations: [StatementPage],
 })
 export class StatementPageModule {}

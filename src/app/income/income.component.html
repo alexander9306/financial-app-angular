@@ -1,0 +1,10 @@
+<ion-item-divider>
+  <ion-list-header lines="full">
+    <ion-label> Income </ion-label>
+  </ion-list-header>
+</ion-item-divider>
+
+<ion-item *ngFor="let income of incomes">
+  <ion-label>{{income.description}}</ion-label>
+  <ion-label>{{income.cash}}</ion-label>
+</ion-item>

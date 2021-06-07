@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
+import { ApolloError } from '@apollo/client/errors';
 import { Subscription } from 'rxjs';
-import { map } from 'rxjs/operators';
 import { GetStatementsGQL, GetStatementsQuery } from '../../generated/graphql';
 
 @Component({
@@ -15,7 +15,7 @@ export class StatementPage implements OnInit, OnDestroy {
 
   loading = false;
 
-  error: any;
+  error: ApolloError;
 
   constructor(private getStatementGQL: GetStatementsGQL) {}
 
@@ -24,8 +24,8 @@ export class StatementPage implements OnInit, OnDestroy {
       .watch({ userId: '1' })
       .valueChanges.subscribe(({ error, data, loading }) => {
         this.statements = data.statements;
-        console.log(error);
-        console.log(loading);
+        this.loading = loading;
+        this.error = error;
       });
   }
 
